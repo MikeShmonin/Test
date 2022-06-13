@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.Bloom?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.Controller">
    <children>
-      <ImageView fx:id="RayanImage1" fitHeight="400.0" fitWidth="601.0" layoutX="119.0">
-         <image>
-            <Image url="@../../../../pics/20150505-gosling-POST.jpg" />
-         </image>
-      </ImageView>
-      <Label alignment="CENTER" depthTest="DISABLE" layoutX="266.0" layoutY="248.0" prefHeight="47.0" prefWidth="288.0" text="Rayan Gosling Tests" textAlignment="CENTER" textFill="#b92e76">
-         <font>
-            <Font name="d_Syracuse Orange" size="36.0" />
-         </font>
+      <AnchorPane layoutX="1.0" prefHeight="74.0" prefWidth="719.0" style="-fx-background-color: white; -fx-region-border: 10;">
+         <children>
+            <Button fx:id="SignInButt" layoutX="606.0" layoutY="15.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="98.0" text="Войти">
+               <font>
+                  <Font name="Monospaced Bold" size="17.0" />
+               </font>
+               <effect>
+                  <Bloom threshold="1.0" />
+               </effect>
+            </Button>
+         </children>
          <effect>
-            <Bloom />
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
          </effect>
-      </Label>
-      <Button fx:id="SignInButt" layoutX="559.0" layoutY="256.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" text="Войти">
-         <font>
-            <Font name="Monospaced Bold" size="17.0" />
-         </font>
-         <effect>
-            <Bloom threshold="1.0" />
-         </effect>
-      </Button>
-      <TextField fx:id="LoginButt" layoutX="273.0" layoutY="296.0" prefHeight="26.0" prefWidth="364.0" promptText="Логин" />
-      <PasswordField fx:id="PasswordButt" layoutX="273.0" layoutY="328.0" prefHeight="26.0" prefWidth="364.0" promptText="Пароль" />
-      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="401.0" prefWidth="120.0">
+      </AnchorPane>
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="401.0" prefWidth="120.0" style="-fx-background-color: white;">
          <children>
             <Button fx:id="TestButt" layoutX="6.0" layoutY="106.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="108.0" text="Тесты" />
             <Button fx:id="HistoryButt" layoutX="6.0" layoutY="206.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="108.0" text="История" />
             <Button fx:id="SettingsButt" layoutX="7.0" layoutY="305.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="108.0" text="Настройки" />
             <Button fx:id="ProfileButt" layoutX="7.0" layoutY="7.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="108.0" text="Профиль" />
          </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
+         </effect>
       </AnchorPane>
+      <Text fx:id="questionText" layoutX="307.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2+2 = ?" textAlignment="CENTER" wrappingWidth="211.0860137939453">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="radButt_2" layoutX="225.0" layoutY="218.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="43.0" text="5">
+         <toggleGroup>
+            <ToggleGroup fx:id="answers" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radButt_1" layoutX="224.0" layoutY="182.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="43.0" text="3" toggleGroup="$answers" />
+      <RadioButton fx:id="radButt_4" layoutX="225.0" layoutY="290.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="43.0" text="4" toggleGroup="$answers" />
+      <RadioButton fx:id="radButt_3" layoutX="225.0" layoutY="254.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="43.0" text="1" toggleGroup="$answers" />
+      <Button fx:id="answerButt" layoutX="367.0" layoutY="325.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" style="-fx-background-color: green;" text="Ответить" textFill="#fffdfd" />
    </children>
 </AnchorPane>

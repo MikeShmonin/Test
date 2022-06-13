@@ -46,14 +46,14 @@
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <RadioButton fx:id="radButt_2" layoutX="225.0" layoutY="218.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="43.0" text="5">
+      <RadioButton fx:id="radButt_2" layoutX="264.0" layoutY="229.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="43.0" text="1">
          <toggleGroup>
             <ToggleGroup fx:id="answers" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="radButt_1" layoutX="224.0" layoutY="182.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="43.0" text="3" toggleGroup="$answers" />
-      <RadioButton fx:id="radButt_4" layoutX="225.0" layoutY="290.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="43.0" text="4" toggleGroup="$answers" />
-      <RadioButton fx:id="radButt_3" layoutX="225.0" layoutY="254.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="43.0" text="1" toggleGroup="$answers" />
+      <RadioButton fx:id="radButt_1" layoutX="264.0" layoutY="192.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="43.0" text="3" toggleGroup="$answers" />
+      <RadioButton fx:id="radButt_4" layoutX="264.0" layoutY="301.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="43.0" text="4" toggleGroup="$answers" />
+      <RadioButton fx:id="radButt_3" layoutX="264.0" layoutY="265.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="43.0" text="5" toggleGroup="$answers" />
       <Button fx:id="answerButt" layoutX="367.0" layoutY="325.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="85.0" style="-fx-background-color: green;" text="Ответить" textFill="#fffdfd" />
    </children>
 </AnchorPane>
