@@ -1,17 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.test.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Привет" onAction="#onHelloButtonClick"/>
-</VBox>
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.Controller">
+   <children>
+      <ImageView fx:id="RayanImage1" fitHeight="400.0" fitWidth="601.0" layoutX="119.0">
+         <image>
+            <Image url="@../../../../pics/20150505-gosling-POST.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" depthTest="DISABLE" layoutX="266.0" layoutY="248.0" prefHeight="47.0" prefWidth="288.0" text="Rayan Gosling Tests" textAlignment="CENTER" textFill="#b92e76">
+         <font>
+            <Font name="d_Syracuse Orange" size="36.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Button fx:id="SignInButt" layoutX="559.0" layoutY="256.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="78.0" text="Войти">
+         <font>
+            <Font name="Monospaced Bold" size="17.0" />
+         </font>
+         <effect>
+            <Bloom threshold="1.0" />
+         </effect>
+      </Button>
+      <TextField fx:id="LoginButt" layoutX="273.0" layoutY="296.0" prefHeight="26.0" prefWidth="364.0" promptText="Логин" />
+      <PasswordField fx:id="PasswordButt" layoutX="273.0" layoutY="328.0" prefHeight="26.0" prefWidth="364.0" promptText="Пароль" />
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="401.0" prefWidth="120.0">
+         <children>
+            <Button fx:id="TestButt" layoutX="6.0" layoutY="106.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="108.0" text="Тесты" />
+            <Button fx:id="HistoryButt" layoutX="6.0" layoutY="206.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="108.0" text="История" />
+            <Button fx:id="SettingsButt" layoutX="7.0" layoutY="305.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="108.0" text="Настройки" />
+            <Button fx:id="ProfileButt" layoutX="7.0" layoutY="7.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="108.0" text="Профиль" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
